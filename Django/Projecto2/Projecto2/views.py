@@ -17,10 +17,9 @@ def dameFecha(request):
 
     return HttpResponse(mensaje)
 
-def calculaEdad(request, anio):
-    edadActual = 18
+def calculaEdad(request, edad, anio):
     periodo = anio-2021
-    edadFutura = edadActual + periodo
-    mensaje = "En el año " + str(anio) + " tendras " + str(edadFutura) + " años"
+    edadFutura = edad + periodo
+    mensaje = "En el año %s tendras %s años" %(anio, edadFutura)
     
     return HttpResponse(mensaje)
